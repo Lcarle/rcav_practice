@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  
+
   get("/", { :controller => "calculations", :action => "instructions" })
 
-  get("/square/", { :controller => "calculations", :action => "square" })
+  get("/square/:number", { :controller => "calculations", :action => "square" })
 
-  get("/square_root/", { :controller => "calculations", :action => "square_root" })
+  get("/square_root/:number", { :controller => "calculations", :action => "square_root" })
 
-  get("/random/", { :controller => "calculations", :action => "random" })
+  get("/random/:num1/:num2", { :controller => "calculations", :action => "random" })
 
-  get("/payment/", { :controller => "calculations", :action => "payment" })
+  get("/payment/:rate/:years/:principal", { :controller => "calculations", :action => "payment" })
 
 
 end
